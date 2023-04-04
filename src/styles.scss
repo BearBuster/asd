@@ -1,1 +1,63 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+
+$rally-green: #1eb980;
+$rally-dark-green: #045d56;
+$rally-orange: #ff6859;
+$rally-yellow: #ffcf44;
+$rally-purple: #b15dff;
+$rally-blue: #72deff;
+
+$rally-green-palette: (
+  50: #c6fdf2,
+  100: #a6fbe2,
+  200: #8bf4d4,
+  300: #78eced,
+  400: #69e2ac,
+  500: #1eb980,
+  600: #459a6c,
+  700: #367b55,
+  800: #275d39,
+  900: #143821,
+  A100: #8c9eff, // These are from "mat-indigo" and weren't defined in the colors for rally green.
+  A200: #536dfe,
+  A400: #3d5afe,
+  A700: #304ffe,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: rgba(black, 0.87),
+    A200: white,
+    A400: white,
+    A700: white,
+  )
+);
+
+$cvb-primary: mat.define-palette($rally-green-palette);
+$cvb-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+$cvb-warn: mat.define-palette(mat.$red-palette);
+
+$cvb-theme: mat.define-dark-theme((
+  color: (
+    primary: $cvb-primary,
+    accent: $cvb-accent,
+    warn: $cvb-warn
+  )
+));
+
+@include mat.all-component-themes($cvb-theme);
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
