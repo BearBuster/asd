@@ -1,1 +1,52 @@
-<p>login works!</p>
+<div class="navbar-container">
+  <div>
+    <img
+      height="100%"
+      alt="Recycle Logo"
+      src="assets/logo.png"
+    />
+    <span class="nav-title">Login to Recycle</span>
+  </div>
+  <div>
+    <span>Don't have an account?</span>
+    <button mat-stroked-button class="custom-stroked">SIGN UP</button>
+  </div>
+</div>
+
+<div class="login-container">
+  <form #formComponent="ngForm" (ngSubmit)="onLoginFormSubmit(formComponent)">
+    <div class="form-row">
+      <mat-form-field appearance="outline">
+        <input
+          matInput
+          type="text"
+          name="username"
+          placeholder="username"
+          [(ngModel)]="username"
+        >
+        <mat-icon matSuffix *ngIf="username !== ''">done</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <input
+          matInput
+          type="password"
+          name="password"
+          placeholder="password"
+          [(ngModel)]="password"
+        >
+        <mat-icon matSuffix *ngIf="password.length >= minPasswordLength">done</mat-icon>
+      </mat-form-field>
+    </div>
+    <div class="form-row login-controls">
+      <span>
+        <mat-checkbox>Remember Me</mat-checkbox>
+      </span>
+      <span>
+        <button mat-flat-button color="primary" type="submit">
+          <mat-icon>lock</mat-icon>LOGIN
+        </button>
+      </span>
+    </div>
+  </form>
+</div>

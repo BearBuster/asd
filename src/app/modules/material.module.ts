@@ -13,9 +13,11 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 
 const MaterialComponents = [
+  MatCheckboxModule,
   MatSidenavModule,
   MatToolbarModule,
   MatGridListModule,

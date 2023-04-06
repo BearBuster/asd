@@ -39,6 +39,7 @@ rally-finance-card {
   height: 100vh;
 }
 .nav-icon {
+  height: 100px;
   .label {
     visibility: hidden;
   }
@@ -46,22 +47,11 @@ rally-finance-card {
     .label {
       visibility: inherit;
     }
+    mat-icon{
+      margin-bottom: 10px;
+    }
   }
-}
-
-mat-toolbar {
-  display: grid;
-  grid-template-columns: repeat(5, auto);
-
-  .nav-icon {
-    .label {
-      display: none;
-    }
-    &.active-link {
-      .label {
-        display: inline;
-        padding-left: 10px;
-      }
-    }
+  mat-icon{
+    transform: scale(1.5);
   }
 }
