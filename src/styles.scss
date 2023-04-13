@@ -64,3 +64,61 @@ $cvb-theme: mat.define-dark-theme((
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+//
+
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+
+
+.my-bg-dark {background: #303030}
+.my-bg-paper-dark {background: #424242}
+.my-bg-paper-dark-light {background: #6c6c6c}
+
+.my-bg-light {background: #FAFAFA}
+.my-bg-paper-light {background: #FFFFFF}
+
+.my-bg-primary-main {background: #651FFF}
+.my-bg-primary-light {background: #D1C4E9}
+.my-bg-primary-dark {background: #311B92}
+
+.my-bg-secondary-main {background: #9C27B0}
+.my-bg-secondary-light {background: #E1BEE7}
+.my-bg-secondary-dark {background: #4A14BC}
+
+.my-text-primary {color: rgba(0,0,0,0.87)}
+.my-text-secondary {color: rgba(0,0,0,0.54)}
+.my-text-disabled {color: rgba(0,0,0,0.38)}
+.my-text-field {color: rgba(0,0,0,0.42)}
+
+
+
+::-webkit-scrollbar {
+  width: 0;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+//input:focus {
+//  border-color: rgb(103, 58, 182) !important;
+//  box-shadow: 0 1px 1px rgba(103, 58, 182, 0.2) inset, 0 0 8px rgba(103, 58, 182, 0.63)!important;
+//}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

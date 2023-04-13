@@ -12,10 +12,19 @@
     mat-button
     class="nav-icon"
     routerLinkActive="active-link"
-    [routerLink]="['/accounts']"
+    [routerLink]="['/account']"
   >
     <mat-icon>attach_money</mat-icon>
-    <div class="label">Accounts</div>
+    <div class="label">Account</div>
+  </button>
+  <button
+    mat-button
+    class="nav-icon"
+    routerLinkActive="active-link"
+    [routerLink]="['/leaderboard']"
+  >
+    <mat-icon>leaderboard</mat-icon>
+    <div class="label">LeaderBoard</div>
   </button>
   <button
     mat-button
@@ -30,10 +39,10 @@
     mat-button
     class="nav-icon"
     routerLinkActive="active-link"
-    [routerLink]="['/budgets']"
+    [routerLink]="['/personal_score']"
   >
     <mat-icon>bar_chart</mat-icon>
-    <div class="label">Budgets</div>
+    <div class="label">Personal Score</div>
   </button>
   <button
     mat-button

@@ -14,9 +14,13 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatTableModule } from '@angular/material/table';
+import { MatChipsModule } from '@angular/material/chips';
 
 
 const MaterialComponents = [
+  MatChipsModule,
+  MatTableModule,
   MatCheckboxModule,
   MatSidenavModule,
   MatToolbarModule,

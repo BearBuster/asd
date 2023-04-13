@@ -4,19 +4,25 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MaterialModule} from "./modules/material.module";
+import { MaterialModule } from "./modules/material.module";
 import { LoginComponent } from './pages/login/login.component';
-import {FormsModule} from "@angular/forms";
+import { FormsModule } from "@angular/forms";
 import { OverviewComponent } from './pages/overview/overview.component';
 import { MapComponent } from './pages/map/map.component';
-import {GoogleMapsModule} from "@angular/google-maps";
+import {MyGoogleMapsModule} from "./modules/my-google-maps.module";
+import { AccountComponent } from './pages/account/account.component';
+import { PersonalScoreComponent } from './pages/personal-score/personal-score.component';
+import { LeaderboardComponent } from './pages/leaderboard/leaderboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     OverviewComponent,
-    MapComponent
+    MapComponent,
+    AccountComponent,
+    PersonalScoreComponent,
+    LeaderboardComponent,
   ],
     imports: [
         BrowserModule,
@@ -24,7 +30,8 @@ import {GoogleMapsModule} from "@angular/google-maps";
         BrowserAnimationsModule,
         MaterialModule,
         FormsModule,
-        GoogleMapsModule
+        MyGoogleMapsModule,
+
     ],
   providers: [],
   bootstrap: [AppComponent]

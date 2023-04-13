@@ -7,9 +7,11 @@ import {Router} from "@angular/router";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(private readonly router: Router) {}
+  constructor(private readonly router: Router) {
+  }
 
   showNavigation() {
     return this.router.url !== '/login';
   }
+
 }

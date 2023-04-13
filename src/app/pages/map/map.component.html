@@ -1,1 +1,8 @@
-<google-map style="width: 100%; height: 100%; display: block"></google-map>
+<google-map
+  height="100%"
+  width="100%"
+  [center]="center"
+  [zoom]="12"
+>
+  <map-marker *ngFor="let i of recyclingStation" [position]="i"></map-marker>
+</google-map>
