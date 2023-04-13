@@ -1,0 +1,9 @@
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 8px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to bottom, #ff0000, #ff8000, #ffff00, #00ff00, #0000ff, #8b00ff);
+}
