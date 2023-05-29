@@ -1,0 +1,103 @@
+@import '../../../styles.scss';
+
+$breakpoint-tablet: 767px;
+
+$unit-space: 8px;
+
+.login-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - #{12 * $unit-space});
+  justify-content: space-evenly;
+  margin: 0 auto;
+  max-width: 700px;
+  padding: $unit-space * 2;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  height: 8 * $unit-space;
+  width: 100%;
+  padding: 0 2 * $unit-space;
+  margin-top: 2 * $unit-space;
+  box-sizing: border-box;
+  & > div {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    &:last-child {
+      justify-content: flex-end;
+    }
+    button,
+    .nav-title {
+      margin-left: 2 * $unit-space;
+    }
+  }
+}
+
+.nav-title {
+  font-size: 1.5rem;
+}
+
+.custom-stroked:not([disabled]) {
+  border-color: $rally-green;
+}
+
+.icon-container,
+.fingerprint-container {
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  mat-icon {
+    color: $rally-green;
+  }
+}
+
+.form-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  mat-form-field:first-child{
+    margin-right: 10px;
+  }
+  mat-form-field{
+    flex: 1;
+  }
+}
+
+.login-controls {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.fingerprint-container {
+  .fingerprint-icon {
+    height: $unit-space * 6;
+    width: $unit-space * 6;
+  }
+  mat-icon {
+    font-size: $unit-space * 6;
+  }
+}
+
+.login-controls button {
+  color: black;
+  letter-spacing: 0.17472em;
+
+  mat-icon {
+    color: black;
+    margin-right: 0.17472em;
+  }
+}
+
+
