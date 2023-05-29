@@ -18,7 +18,7 @@
       <p style="max-width: 500px; opacity: 70%; margin-top: 25px">This is your profile page. You can see the progress you've made with your work and manage your projects or assigned tasks</p>
     </div>
 
-    <button mat-raised-button color="primary" style="margin-top: 45px">Edit Profile</button>
+    <button mat-raised-button color="primary" style="margin-top: 45px" (click)="updateUserInfo()">Edit Profile</button>
 
     <div class="d-flex justify-content-between text-white align-items-start" style="margin-top: 150px">
 
@@ -38,7 +38,7 @@
             <mat-grid-tile>
               <mat-form-field class="user-info-input">
                 <mat-label>Username</mat-label>
-                <input matInput maxlength="256" placeholder="Ex. Diamas" [(ngModel)]="userInfo.username">
+                <input matInput maxlength="256" placeholder="Ex. Diamas" [(ngModel)]="userInfo.name">
               </mat-form-field>
             </mat-grid-tile>
 
@@ -137,7 +137,7 @@
             </div>
           </div>
           <div style="text-align: center">
-            <div style="font-weight: bold">{{userInfo.username}}</div>
+            <div style="font-weight: bold">{{userInfo.name}}</div>
             <div>{{userInfo.city}}, {{userInfo.country}}</div>
           </div>
         </mat-card-content>

@@ -14,7 +14,13 @@ export class MyQrComponent implements OnInit {
   constructor(private userService: UserService) {}
 
   ngOnInit(): void {
-    this.userInfo = this.userService.getUserInfo()
+    let userId = localStorage.getItem('userId');
+    if(userId === null){
+      userId = '0';
+    }
+     this.userService.getUserInfo(parseInt(userId)).subscribe((data) => {
+       this.userInfo = data;
+     })
   }
 
 }

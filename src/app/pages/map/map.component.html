@@ -4,5 +4,5 @@
   [center]="center"
   [zoom]="12"
 >
-  <map-marker *ngFor="let i of recyclingStation" [position]="i"></map-marker>
+  <map-marker *ngFor="let i of recyclingStation" [position]="i" (mapClick)="show(i)"></map-marker>
 </google-map>

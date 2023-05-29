@@ -10,7 +10,17 @@ import {FormBuilder, FormGroup} from "@angular/forms";
 })
 export class AccountComponent implements OnInit {
 
-  userInfo: IUserInfo;
+  userInfo: IUserInfo = {
+    name: '',
+    email: '',
+    firstName: '',
+    lastName: '',
+    address: '',
+    city: '',
+    country: '',
+    phone: '',
+    about: ''
+  };
   UserFormGroup: FormGroup;
 
   constructor(
@@ -19,12 +29,21 @@ export class AccountComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.userInfo = this.userService.getUserInfo();
-    this.initUserForm();
+    let userId = localStorage.getItem('userId');
+    if(userId === null){
+      userId = '0';
+    }
+    this.userService.getUserInfo(parseInt(userId)).subscribe((data)=>{
+      this.userInfo = data;
+      console.log(data)
+      this.initUserForm();
+    });
   }
 
-  updateUserInfo(newUserInfo: IUserInfo){
-    this.userService.updateUserInfo(newUserInfo);
+  updateUserInfo(){
+    this.userService.updateUserInfo(this.userInfo).subscribe((data) => {
+      this.userInfo = data;
+    });
   }
 
   initUserForm(){

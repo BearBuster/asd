@@ -8,6 +8,7 @@ import {PersonalScoreComponent} from "./pages/personal-score/personal-score.comp
 import {LeaderboardComponent} from "./pages/leaderboard/leaderboard.component";
 import {MyQrComponent} from "./pages/my-qr/my-qr.component";
 import {AuthGuard} from "./guards/auth.guard";
+import {SettingsComponent} from "./pages/settings/settings.component";
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -17,7 +18,7 @@ const routes: Routes = [
   { path: 'leaderboard', component: LeaderboardComponent, canActivate:[AuthGuard] },
   { path: 'personal_score', component: PersonalScoreComponent, canActivate:[AuthGuard] },
   { path: 'budgets', component: LoginComponent, canActivate:[AuthGuard] },
-  { path: 'settings', component: LoginComponent, canActivate:[AuthGuard] },
+  { path: 'settings', component: SettingsComponent, canActivate:[AuthGuard] },
   { path: 'my-qr', component: MyQrComponent, canActivate:[AuthGuard] },
   { path: '**', redirectTo: '/overview' },
 ];

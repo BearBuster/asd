@@ -18,4 +18,8 @@ export class MapComponent implements OnInit{
     this.recyclingStation = this.locationService.getRecyclingStation()
   }
 
+  show(i: google.maps.LatLngLiteral) {
+    let resp = this.locationService.getInfo(i);
+    alert(`This Recycling Station can get ${resp?.type} and it work ${resp?.workTime}`)
+  }
 }

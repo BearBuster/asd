@@ -1,10 +1,32 @@
 import { Injectable } from '@angular/core';
 import {ILeaderboardsUser} from "../interfaces/ILeaderboardUser";
+import {HttpClient} from "@angular/common/http";
+import {Observable} from "rxjs";
+
+export interface LeaderboardRequest {
+  id: number,
+  userId: number,
+  recycleType: number,
+  amount: number,
+}
+
+export enum recycleType {
+  Glass = 1,
+  Iron = 2,
+  Tires = 3,
+  Electro = 4,
+  Banners = 5,
+  Clothes = 6,
+  Oil = 7
+}
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class LeaderboardsService {
+
+  apiUrl = 'http://localhost:8080/';
 
   data: ILeaderboardsUser[] = [
     { name: 'John', points: 200, type: 'Iron' },
@@ -56,9 +78,17 @@ export class LeaderboardsService {
     { name: 'Julia', points: 275, type: 'Glass' }
   ]
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
+
+  getLeaderboardsByTypee(type: string, datas: {name: string | undefined, points: number, type: string}[]): {name: string | undefined, points: number, type: string}[]{
+    return datas.filter((data) => data.type === type)
+  }
 
   getLeaderboardsByType(type: string): ILeaderboardsUser[]{
     return this.data.filter((data: ILeaderboardsUser) => data.type === type)
+  }
+
+  getData(): Observable<LeaderboardRequest[]> {
+    return this.http.get<LeaderboardRequest[]>(this.apiUrl + "/api/statistics");
   }
 }

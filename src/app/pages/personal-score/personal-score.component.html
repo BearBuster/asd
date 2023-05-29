@@ -1,1 +1,23 @@
 
+
+<div style="border: 20px solid transparent">
+  <mat-card >
+    <mat-card-header class="d-flex justify-content-center pb-4">
+      <mat-card-title>
+        Your Total Points: <span>{{sumPoints}}</span>
+      </mat-card-title>
+    </mat-card-header>
+  </mat-card>
+</div>
+
+<div *ngFor="let i of importantData" style="border: 20px solid transparent">
+  <mat-card >
+    <mat-card-header>
+      <mat-card-title>{{i.type}}</mat-card-title>
+      <mat-card-subtitle>Your Points equal {{ i.points}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-progress-bar mode="determinate" [value]="i.procent" color="primary"></mat-progress-bar>
+    </mat-card-content>
+  </mat-card>
+</div>

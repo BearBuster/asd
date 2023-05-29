@@ -16,6 +16,8 @@ import { LeaderboardComponent } from './pages/leaderboard/leaderboard.component'
 import { MyQrComponent } from './pages/my-qr/my-qr.component';
 import {QRCodeModule} from "angular2-qrcode";
 import {AuthGuard} from "./guards/auth.guard";
+import {HttpClientModule} from "@angular/common/http";
+import { SettingsComponent } from './pages/settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import {AuthGuard} from "./guards/auth.guard";
     PersonalScoreComponent,
     LeaderboardComponent,
     MyQrComponent,
+    SettingsComponent,
   ],
     imports: [
         BrowserModule,
@@ -35,7 +38,8 @@ import {AuthGuard} from "./guards/auth.guard";
         MaterialModule,
         FormsModule,
         MyGoogleMapsModule,
-        QRCodeModule
+        QRCodeModule,
+        HttpClientModule
     ],
   providers: [
     AuthGuard
