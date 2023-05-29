@@ -1,21 +1,36 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {IUserInfo} from "../../interfaces/UserInfo";
+import {UserService} from "../../services/user.service";
+import {FormBuilder, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-account',
   templateUrl: './account.component.html',
   styleUrls: ['./account.component.scss']
 })
-export class AccountComponent {
+export class AccountComponent implements OnInit {
 
-  username: string = 'BearBuster';
-  email: string = 'frunze.dimka@gmail.com';
-  firstName: string = 'Dumitru'
-  lastName: string = 'Frunza'
-  address: string = 'Podul Inalt 12/1'
-  city: string = 'Chisinau'
-  country: string = 'Moldova'
-  phone: string = '069395194'
-  about: string = 'I am managing this  company   and I am   the company administrator  of this company and the company  that owns'
+  userInfo: IUserInfo;
+  UserFormGroup: FormGroup;
 
+  constructor(
+    private userService: UserService,
+    private formBuilder: FormBuilder
+  ) {}
+
+  ngOnInit(): void {
+    this.userInfo = this.userService.getUserInfo();
+    this.initUserForm();
+  }
+
+  updateUserInfo(newUserInfo: IUserInfo){
+    this.userService.updateUserInfo(newUserInfo);
+  }
+
+  initUserForm(){
+    this.UserFormGroup = this.formBuilder.group({
+
+    })
+  }
 
 }

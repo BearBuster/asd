@@ -38,28 +38,28 @@
             <mat-grid-tile>
               <mat-form-field class="user-info-input">
                 <mat-label>Username</mat-label>
-                <input matInput maxlength="256" placeholder="Ex. Diamas" [(ngModel)]="username">
+                <input matInput maxlength="256" placeholder="Ex. Diamas" [(ngModel)]="userInfo.username">
               </mat-form-field>
             </mat-grid-tile>
 
             <mat-grid-tile>
               <mat-form-field class="user-info-input">
                 <mat-label>Email Address</mat-label>
-                <input matInput maxlength="256" placeholder="Ex. frunze.dimka@gmail.com" [(ngModel)]="email">
+                <input matInput maxlength="256" placeholder="Ex. frunze.dimka@gmail.com" [(ngModel)]="userInfo.email">
               </mat-form-field>
             </mat-grid-tile>
 
             <mat-grid-tile>
               <mat-form-field class="user-info-input">
                 <mat-label>First Name</mat-label>
-                <input matInput maxlength="256" placeholder="Ex. Dumitru" [(ngModel)]="firstName">
+                <input matInput maxlength="256" placeholder="Ex. Dumitru" [(ngModel)]="userInfo.firstName">
               </mat-form-field>
             </mat-grid-tile>
 
             <mat-grid-tile>
               <mat-form-field class="user-info-input">
                 <mat-label>Last Name</mat-label>
-                <input matInput maxlength="256" placeholder="Ex. Frunza" [(ngModel)]="lastName">
+                <input matInput maxlength="256" placeholder="Ex. Frunza" [(ngModel)]="userInfo.lastName">
               </mat-form-field>
             </mat-grid-tile>
 
@@ -73,28 +73,28 @@
             <mat-grid-tile colspan="3">
               <mat-form-field class="user-info-input">
                 <mat-label>Address</mat-label>
-                <input matInput maxlength="256" placeholder="Ex. Podul Inalt 12/1" [(ngModel)]="address">
+                <input matInput maxlength="256" placeholder="Ex. Podul Inalt 12/1" [(ngModel)]="userInfo.address">
               </mat-form-field>
             </mat-grid-tile>
 
             <mat-grid-tile>
               <mat-form-field class="user-info-input">
                 <mat-label>City</mat-label>
-                <input matInput maxlength="256" placeholder="Ex. Chisinau" [(ngModel)]="city">
+                <input matInput maxlength="256" placeholder="Ex. Chisinau" [(ngModel)]="userInfo.city">
               </mat-form-field>
             </mat-grid-tile>
 
             <mat-grid-tile>
               <mat-form-field class="user-info-input">
                 <mat-label>Country</mat-label>
-                <input matInput maxlength="256" placeholder="Ex. Moldova" [(ngModel)]="country">
+                <input matInput maxlength="256" placeholder="Ex. Moldova" [(ngModel)]="userInfo.country">
               </mat-form-field>
             </mat-grid-tile>
 
             <mat-grid-tile>
               <mat-form-field class="user-info-input">
                 <mat-label>Phone</mat-label>
-                <input matInput maxlength="256" placeholder="Ex. (+373) 69395194" [(ngModel)]="phone">
+                <input matInput maxlength="256" placeholder="Ex. (+373) 69395194" [(ngModel)]="userInfo.phone">
               </mat-form-field>
             </mat-grid-tile>
 
@@ -107,7 +107,7 @@
             <mat-grid-tile>
               <mat-form-field class="user-info-input" >
                 <mat-label>About</mat-label>
-                <textarea matInput placeholder="Ex. 100 Main St" [(ngModel)]="about"></textarea>
+                <textarea matInput placeholder="Ex. 100 Main St" [(ngModel)]="userInfo.about"></textarea>
               </mat-form-field>
             </mat-grid-tile>
           </mat-grid-list>
@@ -137,123 +137,11 @@
             </div>
           </div>
           <div style="text-align: center">
-            <div style="font-weight: bold">{{username}}</div>
-            <div>{{city}}, {{country}}</div>
+            <div style="font-weight: bold">{{userInfo.username}}</div>
+            <div>{{userInfo.city}}, {{userInfo.country}}</div>
           </div>
         </mat-card-content>
-
       </mat-card>
-
-<!--      <div class="my-bg-paper-dark-light rounded w-75 me-5" style="min-height: 500px; padding: 23px 21px 23px 23px;">-->
-<!--        <div class="d-flex justify-content-between">-->
-<!--          <p class="d-block" style="font-size: 20px">My Account</p>-->
-<!--          <button mat-raised-button color="primary" style="height: 25px; font-size: 13px">Settings</button>-->
-<!--        </div>-->
-
-<!--        <div style="margin-top: 27px;">-->
-<!--          <p class="mb-4">User Information</p>-->
-<!--          <div class="ms-4">-->
-<!--            <div class="row">-->
-<!--              <div class="col">-->
-<!--                <mat-form-field>-->
-<!--                  <mat-label>Favorite food</mat-label>-->
-<!--                  <input matInput placeholder="username">-->
-<!--                </mat-form-field>-->
-<!--&lt;!&ndash;                <label for="username" class="form-label fw-bold">Username</label>&ndash;&gt;-->
-<!--&lt;!&ndash;                <input name="username" id="username" type="text" class="form-control">&ndash;&gt;-->
-<!--              </div>-->
-<!--              <div class="col">-->
-<!--                <label for="email" class="form-label fw-bold">Email Address</label>-->
-<!--                <input name="email" id="email" type="email" class="form-control">-->
-<!--              </div>-->
-<!--            </div>-->
-<!--            <div class="row mt-4">-->
-<!--              <div class="col">-->
-<!--                <label for="firstName" class="form-label fw-bold">First Name</label>-->
-<!--                <input name="firstName" id="firstName" type="text" class="form-control">-->
-<!--              </div>-->
-<!--              <div class="col">-->
-<!--                <label for="lastName" class="form-label fw-bold">Last Name</label>-->
-<!--                <input name="lastName" id="lastName" type="email" class="form-control">-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-
-<!--        <hr class="my-4">-->
-
-<!--        <div>-->
-<!--          <p class="mb-4">Contact Information</p>-->
-<!--          <div class="ms-4">-->
-<!--            <div class="row">-->
-<!--              <div class="col">-->
-<!--                <label class="form-label fw-bold" for="address">Address</label>-->
-<!--                <input type="text" class="form-control" id="address">-->
-<!--              </div>-->
-<!--            </div>-->
-
-<!--            <div class="row mt-4">-->
-<!--              <div class="col">-->
-<!--                <label class="form-label fw-bold" for="city">City</label>-->
-<!--                <input type="text" class="form-control" id="city">-->
-<!--              </div>-->
-<!--              <div class="col">-->
-<!--                <label class="form-label fw-bold" for="country">Country</label>-->
-<!--                <input type="text" class="form-control" id="country">-->
-<!--              </div>-->
-<!--              <div class="col">-->
-<!--                <label class="form-label fw-bold" for="postal_code">Postal Code</label>-->
-<!--                <input type="text" class="form-control" id="postal_code">-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-
-<!--        <hr class="my-4">-->
-
-<!--        <div>-->
-<!--          <p class="mb-4">Contact Information</p>-->
-
-<!--          <div class="row ms-3">-->
-<!--            <div class="col">-->
-<!--              <label class="form-label fw-bold" for="about">About Me</label>-->
-<!--              <textarea class="form-control" id="about"></textarea>-->
-<!--            </div>-->
-<!--          </div>-->
-
-<!--        </div>-->
-<!--      </div>-->
-
-<!--      <div class="my-bg-paper-dark-light rounded w-25 ms-5 pb-4" style="min-height: 200px; padding-left: 23px; padding-right: 23px; padding-top: 23px">-->
-<!--        <div class="d-flex justify-content-between">-->
-<!--          <button mat-raised-button color="primary" style="height: 25px; font-size: 13px">Connect</button>-->
-<!--          <div class="rounded rounded-circle mx-1" style="width: 225px; height: 225px; margin-top: -125px; overflow: hidden">-->
-<!--            <img src="./assets/me.jpg" style="object-fit: cover;width: 100%; height: 100%">-->
-<!--          </div>-->
-<!--          <button mat-raised-button color="primary" style="height: 25px; font-size: 13px">MSG</button>-->
-<!--        </div>-->
-
-<!--        <div class="d-flex justify-content-center align-items-center mt-4">-->
-<!--          <div class="mx-3 d-flex align-items-center flex-column">-->
-<!--            <span class="fw-bold">123</span>-->
-<!--            <span class="">Friends</span>-->
-<!--          </div>-->
-<!--          <div class="mx-3 d-flex align-items-center flex-column">-->
-<!--            <span class="fw-bold">22</span>-->
-<!--            <span class="">Rating</span>-->
-<!--          </div>-->
-<!--          <div class="mx-3 d-flex align-items-center flex-column">-->
-<!--            <span class="fw-bold">140</span>-->
-<!--            <span class="">Level</span>-->
-<!--          </div>-->
-<!--        </div>-->
-
-<!--        <div class="mt-4 text-center">-->
-<!--          <p class="mb-0 fw-bold">BearBuster</p>-->
-<!--          <p class="mb-0">Chisinau, Moldova</p>-->
-<!--        </div>-->
-
-<!--      </div>-->
     </div>
   </div>
 </div>
