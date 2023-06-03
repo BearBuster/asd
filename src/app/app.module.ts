@@ -18,6 +18,7 @@ import {QRCodeModule} from "angular2-qrcode";
 import {AuthGuard} from "./guards/auth.guard";
 import {HttpClientModule} from "@angular/common/http";
 import { SettingsComponent } from './pages/settings/settings.component';
+import { HacMainComponent } from './pages/hac-main/hac-main.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { SettingsComponent } from './pages/settings/settings.component';
     LeaderboardComponent,
     MyQrComponent,
     SettingsComponent,
+    HacMainComponent,
   ],
     imports: [
         BrowserModule,
